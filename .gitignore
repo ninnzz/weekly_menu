@@ -130,3 +130,6 @@ dmypy.json
 
 .DS_Store
 .idea
+
+pg-data/*
+!pg-data/.gitkeep
