@@ -1,6 +1,6 @@
 # Weekly Menu Exercise
 
-API [exercise](https://github.com/hello-abhishek/hf-take-home-programming-challenges/blob/main/SOFTWARE-ENGINEER.md) for building a weekly menu.
+API exercise for building a weekly menu.
 
 - Development setup: Poetry
 - Running application: Poetry or Docker
