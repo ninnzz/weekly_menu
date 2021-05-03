@@ -21,7 +21,7 @@ exclude_lines =
     if __name__ == .__main__.:
 
 ignore_errors = False
-fail_under = 85.00
+fail_under = 70.0
 sort = Cover
 omit = */site-packages/*, tests/*
 
