@@ -76,6 +76,8 @@ Some of the API models are not implemented as well but I tried to **include the 
 
 ### Available APIs
 
+I included postman collections so you can check.
+
 - Weekly Menu
 - Recipe
 - Ingredients
