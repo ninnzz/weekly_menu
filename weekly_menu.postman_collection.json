@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "301ef8f7-be9e-4814-8541-a507641d8685",
+		"name": "weekly_menu",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Ingredient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"butter\",\n    \"measure_unit\": \"ml\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/ingredient",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"ingredient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Ingredient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/api/ingredient/1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"ingredient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Recipe",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Chicken curry\",\n    \"sub_header\": \"with lots of pork!\",\n    \"description\": \"This is a traditnal filipo food.\",\n    \"tags\": \"tag1,tag2,tag3\",\n    \"category\": \"savory\",\n    \"allergens\": \"nuts,shrimp\",\n    \"prep_time\": 0.5,\n    \"prep_time_unit\": \"hours\",\n    \"difficulty\": \"medium\",\n    \"ingredients\": [\n        {\n            \"ingredient_id\": 1,\n            \"amount_for_two\": 2,\n            \"amount_for_four\": 4,\n            \"included_in_delivery\": true\n        },\n        {\n            \"ingredient_id\": 2,\n            \"amount_for_two\": 1,\n            \"amount_for_four\": 2,\n            \"included_in_delivery\": true\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/recipe",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"recipe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Recipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/api/recipe/13",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"recipe",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Recipe",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Adobo v23333\",\n    \"sub_header\": \"more and more with lots of pork!\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/weekly_menu/1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"weekly_menu",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Recipe",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/recipe/1",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"recipe",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Weekly Menu",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"for_week\": \"2021-04-23\",\n    \"recipes\": [\n        {\"recipe_id\": 6},\n        {\"recipe_id\": 7},\n        {\"recipe_id\": 9}\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/weekly_menu",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"weekly_menu"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weekly Menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/api/weekly_menu/5",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"weekly_menu",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Weekly Menu",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{host}}:{{port}}/api/weekly_menu/4",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"weekly_menu",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Weekly Menu",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"recipes\": [\n        {\"recipe_id\": 7},\n        {\"recipe_id\": 10},\n        {\"recipe_id\": 11},\n        {\"recipe_id\": 12}\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/weekly_menu/5",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"weekly_menu",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Recipe Ingredient",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ingredients\": [\n        {\n            \"ingredient_id\": 1,\n            \"amount_for_two\": 2,\n            \"amount_for_four\": 4,\n            \"included_in_delivery\": true\n        },\n        {\n            \"ingredient_id\": 1,\n            \"amount_for_two\": 5,\n            \"amount_for_four\": 10,\n            \"included_in_delivery\": true\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/recipe/13/ingredients",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"recipe",
+						"13",
+						"ingredients"
+					]
+				},
+				"description": "Given a recipe id, will update/overwrite all the recipe ingredients for that item."
+			},
+			"response": []
+		},
+		{
+			"name": "Create Ingredients",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"butter\",\n    \"measure_unit\": \"ml\"\n}"
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/ingredients",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"ingredients"
+					]
+				},
+				"description": "Option to create many ingredients at once."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "5000"
+		},
+		{
+			"key": "host",
+			"value": "https://0.0.0.0"
+		}
+	]
+}

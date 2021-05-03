@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  db:
+    image: postgres:latest
+    container_name: postgres-weekly-menu
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: weekly_menu
+    networks:
+      - default
+    ports:
+      - 5432:5432
+    restart: always
+    volumes:
+      - ./pg-data:/var/lib/postgresql/data
+  api:
+    container_name: weekly-menu
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app/api:/server/app/api
+    ports:
+      - 8080:80
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: root
+      DB_PASS: password
+      DB_NAME: weekly_menu
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
